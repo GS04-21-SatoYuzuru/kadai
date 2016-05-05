@@ -68,26 +68,41 @@
             var value_tmp = 0;
 
             // TODO: 一度行ったら二度目はしないようにしたい
-            initStationInfo();
+            //            initStationInfo();
 
             checkStationAndTrafficyLV(station, trafficy_level);
 
             function initStationInfo(value) {
                 localStorage.clear();
-                localStorage.setItem("tLv_tokyo", 1);
-                localStorage.setItem("tLv_yurakucho", 1);
+                localStorage.setItem("tLv_tokyo", 50);
+                localStorage.setItem("tLv_yurakucho", 5);
                 localStorage.setItem("tLv_shimbashi", 1);
-                localStorage.setItem("tLv_hamamatsucho", 1);
-                localStorage.setItem("tLv_tamachi", 1);
-                localStorage.setItem("tLv_shinagawa", 1);
-                localStorage.setItem("tLv_osaki", 1);
+                localStorage.setItem("tLv_hamamatsucho", 2);
+                localStorage.setItem("tLv_tamachi", 3);
+                localStorage.setItem("tLv_shinagawa", 7);
+                localStorage.setItem("tLv_osaki", 14);
                 localStorage.setItem("tLv_gotanda", 1);
-                localStorage.setItem("tLv_meguro", 1);
-                localStorage.setItem("tLv_ebisu", 1);
-                localStorage.setItem("tLv_shibuya", 1);
-                localStorage.setItem("tLv_harajuku", 1);
-                localStorage.setItem("tLv_yoyogi", 1);
-                localStorage.setItem("tLv_shinjuku", 1);
+                localStorage.setItem("tLv_meguro", 8);
+                localStorage.setItem("tLv_ebisu", 4);
+                localStorage.setItem("tLv_shibuya", 10);
+                localStorage.setItem("tLv_harajuku", 15);
+                localStorage.setItem("tLv_yoyogi", 20);
+                localStorage.setItem("tLv_shinjuku", 6);
+                localStorage.setItem("tLv_shinokubo", 2);
+                localStorage.setItem("tLv_takadanobaba", 6);
+                localStorage.setItem("tLv_mejiro", 2);
+                localStorage.setItem("tLv_ikebukuro", 8);
+                localStorage.setItem("tLv_otsuka", 13);
+                localStorage.setItem("tLv_sugamo", 30);
+                localStorage.setItem("tLv_komagome", 4);
+                localStorage.setItem("tLv_tabata", 16);
+                localStorage.setItem("tLv_nishinippori", 7);
+                localStorage.setItem("tLv_nippori", 9);
+                localStorage.setItem("tLv_uguisudani", 10);
+                localStorage.setItem("tLv_ueno", 12);
+                localStorage.setItem("tLv_okachimachi", 15);
+                localStorage.setItem("tLv_akihabara", 4);
+                localStorage.setItem("tLv_kanda", 6);
             }
 
             function checkStationAndTrafficyLV(name, value) {
@@ -162,6 +177,81 @@
                     localStorage.setItem("tLv_shinjuku", value_tmp);
                     console.log("新宿: " + localStorage.getItem("tLv_shinjuku"));
                     break;
+                case "shinokubo":
+                    value_tmp = parseInt(value) + parseInt(localStorage.getItem("tLv_shinokubo"));
+                    localStorage.setItem("tLv_shinokubo", value_tmp);
+                    console.log("新大久保: " + localStorage.getItem("tLv_shinokubo"));
+                    break;
+                case "takadanobaba":
+                    value_tmp = parseInt(value) + parseInt(localStorage.getItem("tLv_takadanobaba"));
+                    localStorage.setItem("tLv_takadanobaba", value_tmp);
+                    console.log("高田馬場: " + localStorage.getItem("tLv_takadanobaba"));
+                    break;
+                case "mejiro":
+                    value_tmp = parseInt(value) + parseInt(localStorage.getItem("tLv_mejiro"));
+                    localStorage.setItem("tLv_mejiro", value_tmp);
+                    console.log("目白: " + localStorage.getItem("tLv_mejiro"));
+                    break;
+                case "ikebukuro":
+                    value_tmp = parseInt(value) + parseInt(localStorage.getItem("tLv_ikebukuro"));
+                    localStorage.setItem("tLv_ikebukuro", value_tmp);
+                    console.log("池袋: " + localStorage.getItem("tLv_ikebukuro"));
+                    break;
+                case "otsuka":
+                    value_tmp = parseInt(value) + parseInt(localStorage.getItem("tLv_otsuka"));
+                    localStorage.setItem("tLv_otsuka", value_tmp);
+                    console.log("大塚: " + localStorage.getItem("tLv_otsuka"));
+                    break;
+                case "sugamo":
+                    value_tmp = parseInt(value) + parseInt(localStorage.getItem("tLv_sugamo"));
+                    localStorage.setItem("tLv_sugamo", value_tmp);
+                    console.log("巣鴨: " + localStorage.getItem("tLv_sugamo"));
+                    break;
+                case "komagome":
+                    value_tmp = parseInt(value) + parseInt(localStorage.getItem("tLv_komagome"));
+                    localStorage.setItem("tLv_komagome", value_tmp);
+                    console.log("駒込: " + localStorage.getItem("tLv_komagome"));
+                    break;
+                case "tabata":
+                    value_tmp = parseInt(value) + parseInt(localStorage.getItem("tLv_tabata"));
+                    localStorage.setItem("tLv_tabata", value_tmp);
+                    console.log("田端: " + localStorage.getItem("tLv_tabata"));
+                    break;
+                case "nishinippori":
+                    value_tmp = parseInt(value) + parseInt(localStorage.getItem("tLv_nishinippori"));
+                    localStorage.setItem("tLv_nishinippori", value_tmp);
+                    console.log("西日暮里: " + localStorage.getItem("tLv_nishinippori"));
+                    break;
+                case "nippori":
+                    value_tmp = parseInt(value) + parseInt(localStorage.getItem("tLv_nippori"));
+                    localStorage.setItem("tLv_nippori", value_tmp);
+                    console.log("日暮里: " + localStorage.getItem("tLv_nippori"));
+                    break;
+                case "uguisudani":
+                    value_tmp = parseInt(value) + parseInt(localStorage.getItem("tLv_uguisudani"));
+                    localStorage.setItem("tLv_uguisudani", value_tmp);
+                    console.log("鶯谷: " + localStorage.getItem("tLv_uguisudani"));
+                    break;
+                case "ueno":
+                    value_tmp = parseInt(value) + parseInt(localStorage.getItem("tLv_ueno"));
+                    localStorage.setItem("tLv_ueno", value_tmp);
+                    console.log("上野: " + localStorage.getItem("tLv_ueno"));
+                    break;
+                case "okachimachi":
+                    value_tmp = parseInt(value) + parseInt(localStorage.getItem("tLv_okachimachi"));
+                    localStorage.setItem("tLv_okachimachi", value_tmp);
+                    console.log("御徒町: " + localStorage.getItem("tLv_okachimachi"));
+                    break;
+                case "akihabara":
+                    value_tmp = parseInt(value) + parseInt(localStorage.getItem("tLv_akihabara"));
+                    localStorage.setItem("tLv_akihabara", value_tmp);
+                    console.log("秋葉原: " + localStorage.getItem("tLv_akihabara"));
+                    break;
+                case "kanda":
+                    value_tmp = parseInt(value) + parseInt(localStorage.getItem("tLv_kanda"));
+                    localStorage.setItem("tLv_kanda", value_tmp);
+                    console.log("神田: " + localStorage.getItem("tLv_kanada"));
+                    break;
                 default:
                     break;
                 }
@@ -190,21 +280,21 @@
 
             function changeGradient() {
                 var gradient = [
-    'rgba(0, 255, 255, 0)',
-    'rgba(0, 255, 255, 1)',
-    'rgba(0, 191, 255, 1)',
-    'rgba(0, 127, 255, 1)',
-    'rgba(0, 63, 255, 1)',
-    'rgba(0, 0, 255, 1)',
-    'rgba(0, 0, 223, 1)',
-    'rgba(0, 0, 191, 1)',
-    'rgba(0, 0, 159, 1)',
-    'rgba(0, 0, 127, 1)',
-    'rgba(63, 0, 91, 1)',
-    'rgba(127, 0, 63, 1)',
-    'rgba(191, 0, 31, 1)',
-    'rgba(255, 0, 0, 1)'
-  ]
+                    'rgba(0, 255, 255, 0)',
+                    'rgba(0, 255, 255, 1)',
+                    'rgba(0, 191, 255, 1)',
+                    'rgba(0, 127, 255, 1)',
+                    'rgba(0, 63, 255, 1)',
+                    'rgba(0, 0, 255, 1)',
+                    'rgba(0, 0, 223, 1)',
+                    'rgba(0, 0, 191, 1)',
+                    'rgba(0, 0, 159, 1)',
+                    'rgba(0, 0, 127, 1)',
+                    'rgba(63, 0, 91, 1)',
+                    'rgba(127, 0, 63, 1)',
+                    'rgba(191, 0, 31, 1)',
+                    'rgba(255, 0, 0, 1)'
+                ]
                 heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
             }
 
@@ -291,6 +381,81 @@
                         // 新宿
                         location: new google.maps.LatLng(35.690553, 139.699579),
                         weight: parseInt(localStorage.getItem("tLv_shinjuku"))
+                    },
+                    {
+                        // 新大久保
+                        location: new google.maps.LatLng(35.701305, 139.700048),
+                        weight: parseInt(localStorage.getItem("tLv_shinokubo"))
+                    },
+                    {
+                        // 高田馬場
+                        location: new google.maps.LatLng(35.713447, 139.704138),
+                        weight: parseInt(localStorage.getItem("tLv_takadanobaba"))
+                    },
+                    {
+                        // 目白
+                        location: new google.maps.LatLng(35.72122, 139.706612),
+                        weight: parseInt(localStorage.getItem("tLv_mejiro"))
+                    },
+                    {
+                        // 池袋
+                        location: new google.maps.LatLng(35.72888, 139.710348),
+                        weight: parseInt(localStorage.getItem("tLv_mejiro"))
+                    },
+                    {
+                        // 大塚
+                        location: new google.maps.LatLng(35.731785, 139.728227),
+                        weight: parseInt(localStorage.getItem("tLv_mejiro"))
+                    },
+                    {
+                        // 巣鴨
+                        location: new google.maps.LatLng(35.733705, 139.740349),
+                        weight: parseInt(localStorage.getItem("tLv_mejiro"))
+                    },
+                    {
+                        // 駒込
+                        location: new google.maps.LatLng(35.736567, 139.74701),
+                        weight: parseInt(localStorage.getItem("tLv_komagome"))
+                    },
+                    {
+                        // 田端
+                        location: new google.maps.LatLng(35.738365, 139.760744),
+                        weight: parseInt(localStorage.getItem("tLv_tabata"))
+                    },
+                    {
+                        // 西日暮里
+                        location: new google.maps.LatLng(35.732006, 139.766886),
+                        weight: parseInt(localStorage.getItem("tLv_nishinippori"))
+                    },
+                    {
+                        // 日暮里
+                        location: new google.maps.LatLng(35.728312, 139.770518),
+                        weight: parseInt(localStorage.getItem("tLv_nippori"))
+                    },
+                    {
+                        // 鶯谷
+                        location: new google.maps.LatLng(35.720358, 139.779036),
+                        weight: parseInt(localStorage.getItem("tLv_uguisudani"))
+                    },
+                    {
+                        // 上野
+                        location: new google.maps.LatLng(35.711208, 139.773542),
+                        weight: parseInt(localStorage.getItem("tLv_ueno"))
+                    },
+                    {
+                        // 御徒町
+                        location: new google.maps.LatLng(35.707498, 139.774805),
+                        weight: parseInt(localStorage.getItem("tLv_okachimachi"))
+                    },
+                    {
+                        // 秋葉原
+                        location: new google.maps.LatLng(35.698353, 139.773114),
+                        weight: parseInt(localStorage.getItem("tLv_akihabara"))
+                    },
+                    {
+                        // 神田
+                        location: new google.maps.LatLng(35.692141, 139.771225),
+                        weight: parseInt(localStorage.getItem("tLv_kanda"))
                     }
                 ];
             }
