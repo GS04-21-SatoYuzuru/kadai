@@ -49,8 +49,25 @@
         mb_internal_encoding("UTF-8");
         mb_http_output("UTF-8");
 
+        // input_data.phpから送られてきたデータを変数に代入
         $station = $_POST["station"];
         $trafficy_level = $_POST["trafficy_level"];
+
+        // 日時を取得
+        $timestamp = time();
+        $timestamp_custom = date( "Y/m/d/H:i:s" , $timestamp );
+
+        // ファイル書き出し
+        // 駅名が空っぽだったら処理しない
+        if ($station != "") {
+            $str = $station.",".$trafficy_level.",".$timestamp_custom."\n";
+
+            $file = fopen("export/data.csv","a");
+            flock($file, LOCK_EX);
+            fputs($file,$str);
+            flock($file, LOCK_UN);
+            fclose($file);
+        }
     ?>
         <div id="floating-panel">
             <button onclick="toggleHeatmap()">Toggle Heatmap</button>
