@@ -68,7 +68,7 @@
             var value_tmp = 0;
 
             // TODO: 一度行ったら二度目はしないようにしたい
-            //            initStationInfo();
+            initStationInfo();
 
             checkStationAndTrafficyLV(station, trafficy_level);
 
@@ -80,12 +80,12 @@
                 localStorage.setItem("tLv_hamamatsucho", 2);
                 localStorage.setItem("tLv_tamachi", 3);
                 localStorage.setItem("tLv_shinagawa", 7);
-                localStorage.setItem("tLv_osaki", 14);
-                localStorage.setItem("tLv_gotanda", 1);
+                localStorage.setItem("tLv_osaki", 140);
+                localStorage.setItem("tLv_gotanda", 10);
                 localStorage.setItem("tLv_meguro", 8);
                 localStorage.setItem("tLv_ebisu", 4);
                 localStorage.setItem("tLv_shibuya", 10);
-                localStorage.setItem("tLv_harajuku", 15);
+                localStorage.setItem("tLv_harajuku", 80);
                 localStorage.setItem("tLv_yoyogi", 20);
                 localStorage.setItem("tLv_shinjuku", 6);
                 localStorage.setItem("tLv_shinokubo", 2);
@@ -95,7 +95,7 @@
                 localStorage.setItem("tLv_otsuka", 13);
                 localStorage.setItem("tLv_sugamo", 30);
                 localStorage.setItem("tLv_komagome", 4);
-                localStorage.setItem("tLv_tabata", 16);
+                localStorage.setItem("tLv_tabata", 77);
                 localStorage.setItem("tLv_nishinippori", 7);
                 localStorage.setItem("tLv_nippori", 9);
                 localStorage.setItem("tLv_uguisudani", 10);
@@ -271,6 +271,92 @@
                 heatmap = new google.maps.visualization.HeatmapLayer({
                     data: getPoints(),
                     map: map
+                });
+
+                // 東京
+                var infowindow_tokyo = new google.maps.InfoWindow({
+                    content: "東京"
+                });
+                var marker_tokyo = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.681298, 139.766247),
+                    map: map,
+                    title: "tokyo"
+                });
+                marker_tokyo.addListener('click', function () {
+                    infowindow_tokyo.open(map, marker_tokyo);
+                });
+
+                // 有楽町
+                var infowindow_yurakucho = new google.maps.InfoWindow({
+                    content: "有楽町"
+                });
+                var marker_yurakucho = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.674942, 139.762894),
+                    map: map,
+                    title: "yurakucho"
+                });
+                marker_yurakucho.addListener('click', function () {
+                    infowindow_yurakucho.open(map, marker_yurakucho);
+                });
+                // 新橋
+                var infowindow_shimbashi = new google.maps.InfoWindow({
+                    content: "新橋"
+                });
+                var marker_shimbashi = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.666132, 139.758412),
+                    map: map,
+                    title: "shimbashi"
+                });
+                marker_shimbashi.addListener('click', function () {
+                    infowindow_shimbashi.open(map, marker_shimbashi);
+                });
+                // 浜松町
+                var infowindow_hamamatsucho = new google.maps.InfoWindow({
+                    content: "浜松町"
+                });
+                var marker_hamamatsucho = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.655381, 139.757129),
+                    map: map,
+                    title: "hamamatsucho"
+                });
+                marker_hamamatsucho.addListener('click', function () {
+                    infowindow_hamamatsucho.open(map, marker_hamamatsucho);
+                });
+                // 田町
+                var infowindow_tamachi = new google.maps.InfoWindow({
+                    content: "田町"
+                });
+                var marker_tamachi = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.645798, 139.747656),
+                    map: map,
+                    title: "tamachi"
+                });
+                marker_tamachi.addListener('click', function () {
+                    infowindow_tamachi.open(map, marker_tamachi);
+                });
+                // 大崎
+                var infowindow_osaki = new google.maps.InfoWindow({
+                    content: "大崎"
+                });
+                var marker_osaki = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.620023, 139.728188),
+                    map: map,
+                    title: "osaki"
+                });
+                marker_osaki.addListener('click', function () {
+                    infowindow_osaki.open(map, marker_osaki);
+                });
+                // 五反田
+                var infowindow_gotanda = new google.maps.InfoWindow({
+                    content: "五反田"
+                });
+                var marker_gotanda = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.626178, 139.723606),
+                    map: map,
+                    title: "gotanda"
+                });
+                marker_gotanda.addListener('click', function () {
+                    infowindow_gotanda.open(map, marker_gotanda);
                 });
             }
 
