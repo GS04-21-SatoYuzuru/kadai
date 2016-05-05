@@ -20,7 +20,7 @@
                     <option value=""></option>
                     <option value="tokyo">東京</option>
                     <option value="yurakucho">有楽町</option>
-                    <option value="shinbashi">新橋</option>
+                    <option value="shimbashi">新橋</option>
                     <option value="hamamatsucho">浜松町</option>
                     <option value="tamachi">田町</option>
                     <option value="shinagawa">品川</option>
@@ -41,6 +41,7 @@
                     <option value="komagome">駒込</option>
                     <option value="tabata">田端</option>
                     <option value="nishinippori">西日暮里</option>
+                    <option value="nippori">日暮里</option>
                     <option value="uguisudani">鶯谷</option>
                     <option value="ueno">上野</option>
                     <option value="okachimachi">御徒町</option>
