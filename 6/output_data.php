@@ -90,7 +90,7 @@
                 localStorage.setItem("tLv_shinjuku", 6);
                 localStorage.setItem("tLv_shinokubo", 2);
                 localStorage.setItem("tLv_takadanobaba", 6);
-                localStorage.setItem("tLv_mejiro", 2);
+                localStorage.setItem("tLv_mejiro", 100);
                 localStorage.setItem("tLv_ikebukuro", 8);
                 localStorage.setItem("tLv_otsuka", 13);
                 localStorage.setItem("tLv_sugamo", 30);
@@ -358,6 +358,260 @@
                 marker_gotanda.addListener('click', function () {
                     infowindow_gotanda.open(map, marker_gotanda);
                 });
+                // 目黒
+                var infowindow_meguro = new google.maps.InfoWindow({
+                    content: "目黒"
+                });
+                var marker_meguro = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.633998, 139.715828),
+                    map: map,
+                    title: "meguro"
+                });
+                marker_meguro.addListener('click', function () {
+                    infowindow_meguro.open(map, marker_meguro);
+                });
+                // 恵比寿
+                var infowindow_ebisu = new google.maps.InfoWindow({
+                    content: "恵比寿"
+                });
+                var marker_ebisu = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.647156, 139.709739),
+                    map: map,
+                    title: "ebisu"
+                });
+                marker_ebisu.addListener('click', function () {
+                    infowindow_ebisu.open(map, marker_ebisu);
+                });
+                // 渋谷
+                var infowindow_shibuya = new google.maps.InfoWindow({
+                    content: "渋谷"
+                });
+                var marker_shibuya = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.6595, 139.699554),
+                    map: map,
+                    title: "shibuya"
+                });
+                marker_shibuya.addListener('click', function () {
+                    infowindow_shibuya.open(map, marker_shibuya);
+                });
+                // 原宿
+                var infowindow_harajuku = new google.maps.InfoWindow({
+                    content: "原宿"
+                });
+                var marker_harajuku = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.670399, 139.702715),
+                    map: map,
+                    title: "harajuku"
+                });
+                marker_harajuku.addListener('click', function () {
+                    infowindow_harajuku.open(map, marker_harajuku);
+                });
+                // 代々木
+                var infowindow_yoyogi = new google.maps.InfoWindow({
+                    content: "代々木"
+                });
+                var marker_yoyogi = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.684043, 139.702188),
+                    map: map,
+                    title: "yoyogi"
+                });
+                marker_yoyogi.addListener('click', function () {
+                    infowindow_yoyogi.open(map, marker_yoyogi);
+                });
+                // 新宿
+                var infowindow_shinjuku = new google.maps.InfoWindow({
+                    content: "新宿"
+                });
+                var marker_shinjuku = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.690553, 139.699579),
+                    map: map,
+                    title: "shinjuku"
+                });
+                marker_shinjuku.addListener('click', function () {
+                    infowindow_shinjuku.open(map, marker_shinjuku);
+                });
+                // 新大久保
+                var infowindow_shinokubo = new google.maps.InfoWindow({
+                    content: "新大久保"
+                });
+                var marker_shinokubo = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.701305, 139.700048),
+                    map: map,
+                    title: "shinokubo"
+                });
+                marker_shinokubo.addListener('click', function () {
+                    infowindow_shinokubo.open(map, marker_shinokubo);
+                });
+                // 高田馬場
+                var infowindow_takadanobaba = new google.maps.InfoWindow({
+                    content: "高田馬場"
+                });
+                var marker_takadanobaba = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.713447, 139.704138),
+                    map: map,
+                    title: "takadanobaba"
+                });
+                marker_takadanobaba.addListener('click', function () {
+                    infowindow_takadanobaba.open(map, marker_takadanobaba);
+                });
+                // 目白
+                var infowindow_mejiro = new google.maps.InfoWindow({
+                    content: "目白"
+                });
+                var marker_mejiro = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.72122, 139.706612),
+                    map: map,
+                    title: "mejiro"
+                });
+                marker_mejiro.addListener('click', function () {
+                    infowindow_mejiro.open(map, marker_mejiro);
+                });
+                // 池袋
+                var infowindow_ikebukuro = new google.maps.InfoWindow({
+                    content: "池袋"
+                });
+                var marker_ikebukuro = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.72888, 139.710348),
+                    map: map,
+                    title: "ikebukuro"
+                });
+                marker_ikebukuro.addListener('click', function () {
+                    infowindow_ikebukuro.open(map, marker_ikebukuro);
+                });
+                // 大塚
+                var infowindow_otsuka = new google.maps.InfoWindow({
+                    content: "大塚"
+                });
+                var marker_otsuka = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.731785, 139.728227),
+                    map: map,
+                    title: "otsuka"
+                });
+                marker_otsuka.addListener('click', function () {
+                    infowindow_otsuka.open(map, marker_otsuka);
+                });
+                // 巣鴨
+                var infowindow_sugamo = new google.maps.InfoWindow({
+                    content: "巣鴨"
+                });
+                var marker_sugamo = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.733705, 139.740349),
+                    map: map,
+                    title: "sugamo"
+                });
+                marker_sugamo.addListener('click', function () {
+                    infowindow_sugamo.open(map, marker_sugamo);
+                });
+                // 駒込
+                var infowindow_komagome = new google.maps.InfoWindow({
+                    content: "駒込"
+                });
+                var marker_komagome = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.736567, 139.74701),
+                    map: map,
+                    title: "komagome"
+                });
+                marker_komagome.addListener('click', function () {
+                    infowindow_komagome.open(map, marker_komagome);
+                });
+                // 田端
+                var infowindow_tabata = new google.maps.InfoWindow({
+                    content: "田端"
+                });
+                var marker_tabata = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.738365, 139.760744),
+                    map: map,
+                    title: "tabata"
+                });
+                marker_tabata.addListener('click', function () {
+                    infowindow_tabata.open(map, marker_tabata);
+                });
+                // 西日暮里
+                var infowindow_nishinippori = new google.maps.InfoWindow({
+                    content: "西日暮里"
+                });
+                var marker_nishinippori = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.732006, 139.766886),
+                    map: map,
+                    title: "nishinippori"
+                });
+                marker_nishinippori.addListener('click', function () {
+                    infowindow_nishinippori.open(map, marker_nishinippori);
+                });
+                // 日暮里
+                var infowindow_nippori = new google.maps.InfoWindow({
+                    content: "日暮里"
+                });
+                var marker_nippori = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.728312, 139.770518),
+                    map: map,
+                    title: "nippori"
+                });
+                marker_nippori.addListener('click', function () {
+                    infowindow_nippori.open(map, marker_nippori);
+                });
+                // 鶯谷
+                var infowindow_uguisudani = new google.maps.InfoWindow({
+                    content: "鶯谷"
+                });
+                var marker_uguisudani = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.720358, 139.779036),
+                    map: map,
+                    title: "uguisudani"
+                });
+                marker_uguisudani.addListener('click', function () {
+                    infowindow_uguisudani.open(map, marker_uguisudani);
+                });
+                // 上野
+                var infowindow_ueno = new google.maps.InfoWindow({
+                    content: "上野"
+                });
+                var marker_ueno = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.711208, 139.773542),
+                    map: map,
+                    title: "ueno"
+                });
+                marker_ueno.addListener('click', function () {
+                    infowindow_ueno.open(map, marker_ueno);
+                });
+                // 御徒町
+                var infowindow_okachimachi = new google.maps.InfoWindow({
+                    content: "御徒町"
+                });
+                var marker_okachimachi = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.707498, 139.774805),
+                    map: map,
+                    title: "okachimachi"
+                });
+                marker_okachimachi.addListener('click', function () {
+                    infowindow_okachimachi.open(map, marker_okachimachi);
+                });
+                // 秋葉原
+                var infowindow_akihabara = new google.maps.InfoWindow({
+                    content: "秋葉原"
+                });
+                var marker_akihabara = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.698353, 139.773114),
+                    map: map,
+                    title: "akihabara"
+                });
+                marker_akihabara.addListener('click', function () {
+                    infowindow_akihabara.open(map, marker_akihabara);
+                });
+                // 神田
+                var infowindow_kanda = new google.maps.InfoWindow({
+                    content: "神田"
+                });
+                var marker_kanda = new google.maps.Marker({
+                    position: new google.maps.LatLng(35.692141, 139.77122),
+                    map: map,
+                    title: "kanda"
+                });
+                marker_kanda.addListener('click', function () {
+                    infowindow_kanda.open(map, marker_kanda);
+                });
+
+
             }
 
             function toggleHeatmap() {
