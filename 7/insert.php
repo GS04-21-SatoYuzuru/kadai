@@ -1,32 +1,29 @@
-<!DOCTYPE html>
-<html lang="ja">
+<?php
+    //1. POSTデータ取得（）
+    $name = $_POST["name"];
+    $age = $_POST["age"];
+    $blood = $_POST["blood"];
+    $star = $_POST["star"];
 
-<head>
-    <meta charset="UTF-8">
-    <title>送信完了</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- ResetCSS -->
-    <link href="css/reset.css" rel="stylesheet">
-    <!-- jQueryMobileCSS   -->
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-</head>
+    //2. DB接続します
+    $pdo = new PDO('mysql:dbname=an;charset=utf8;host=localhost', 'root', 'root');
 
-<body>
-    <!-- 送信完了ページ -->
-    <div data-role="page" id="finish">
-        <div data-role="header">
-            <h1>送信完了！</h1>
-        </div>
-        <div data-role="content">
-            <p>ご協力ありがとうございました。</p>
-            <p><a href="index.html" data-role="button" data-icon="home">ホームへ</a></p>
-        </div>
-        <div data-role="footer">
-            <h4>Copyright 2016</h4>
-        </div>
-    </div>
-</body>
+    //３．データ登録SQL作成
+    $stmt = $pdo->prepare("INSERT INTO an_table (id, name, age, blood, star, indate )VALUES(NULL, :name, :age, :blood, :star, sysdate())");
+    $stmt->bindValue(':name', $name);
+    $stmt->bindValue(':age', $age);
+    $stmt->bindValue(':blood', $blood);
+    $stmt->bindValue(':star', $star);
+    $status = $stmt->execute();
 
-</html>
+    //４．データ登録処理後
+    if($status==false) {
+        //Errorの場合$status=falseとなり、エラー表示
+        echo "SQLエラー";
+        exit;
+    } else {
+        //５．finish.htmlへリダイレクト
+        header('Location: finish.html');
+        exit;
+    }
+?>
