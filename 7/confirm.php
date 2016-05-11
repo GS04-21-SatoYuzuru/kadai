@@ -5,18 +5,15 @@
     <meta charset="UTF-8">
     <title>確認</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- ResetCSS -->
     <link href="css/reset.css" rel="stylesheet">
     <!-- jQueryMobileCSS   -->
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 
 <body>
-
     <!-- 確認ページ -->
     <div data-role="page" id="confirm">
         <div data-role="header">
@@ -39,16 +36,13 @@
             <h4>Copyright 2016</h4>
         </div>
     </div>
-
     <script>
         var valName;
         var valAge;
         var valBlood;
         var valStar;
-
         valName = localStorage.getItem("name");
         $("#confirm_name").html("名前: " + valName);
-
         valAge = localStorage.getItem("age");
         if (localStorage.getItem("age") == 0) {
             $("#confirm_age").html("年齢: 秘密");
@@ -56,12 +50,8 @@
             valAge = localStorage.getItem("age");
             $("#confirm_age").html("年齢: " + valAge + " 歳");
         }
-
-
         valBlood = localStorage.getItem("blood");
         $("#confirm_blood").html("血液型: " + valBlood);
-
-
         valStar = localStorage.getItem("star");
         $("#confirm_star").html("星座: " + valStar);
     </script>

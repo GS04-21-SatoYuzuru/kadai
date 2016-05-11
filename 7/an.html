@@ -5,18 +5,15 @@
     <meta charset="UTF-8">
     <title>アンケート</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- ResetCSS -->
     <link href="css/reset.css" rel="stylesheet">
     <!-- jQueryMobileCSS   -->
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>:;
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 
 <body>
-
     <!-- アンケートページ -->
     <div data-role="page" id="an">
         <div data-role="header">
@@ -24,18 +21,16 @@
         </div>
         <div data-role="content">
             <p>アンケートにお答え下さい！</p>
-            <form name="form1" action="confirm.html" method="post">
+            <form action="confirm.php" method="post">
                 <div data-role="fieldcontain">
                     <label for="name">ニックネーム</label>
                     <input type="text" name="name" id="name" value="ななし" required>
                 </div>
-
                 <div data-role="fieldcontain">
                     <label for="age">年齢</label>
                     <input type="range" name="age" min="0" max="100" id="age" value="20">
                     <p>(秘密にしたい方は「0」に...)</p>
                 </div>
-
                 <div data-role="fieldcontain">
                     <label for="blood">星座</label>
                     <select name="blood" id="blood" data-native-menu="false">
@@ -47,7 +42,6 @@
                         <option value="不明">不明</option>
                     </select>
                 </div>
-
                 <div data-role="fieldcontain">
                     <label for="star">星座</label>
                     <select name="star" id="star" data-native-menu="false">
@@ -65,8 +59,7 @@
                         <option value="いて座">いて座</option>
                     </select>
                 </div>
-
-                <input id="btn_submit" type="submit" value="送信" data-role="button" data-inline="true">
+                <input type="submit" value="送信" data-role="button" data-inline="true">
             </form>
             <p><a href="index.html" data-role="button" data-icon="home">ホームへ</a></p>
         </div>
@@ -74,20 +67,6 @@
             <h4>Copyright 2016</h4>
         </div>
     </div>
-
-    <script>
-        //送信処理（ボタンをクリック）
-        $("#btn_submit").on("click", function () {
-            localStorage.remove("name");
-            localStorage.remove("age");
-            localStorage.remove("blood");
-            localStorage.remove("star");
-            localStorage.setItem("name", $("#name").val());
-            localStorage.setItem("age", $("#age").val());
-            localStorage.setItem("blood", $("#blood").val());
-            localStorage.setItem("star", $("#star").val());
-        });
-    </script>
 </body>
 
 </html>
