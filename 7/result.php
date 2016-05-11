@@ -29,7 +29,7 @@
             <p>あああ</p>
             <p>あああ</p>
             <p>あああ</p>
-            <p><a href="index.php" data-role="button" data-icon="home">ホームへ</a></p>
+            <p><a href="index.html" data-role="button" data-icon="home">ホームへ</a></p>
         </div>
         <div data-role="footer">
             <h4>Copyright 2016</h4>
