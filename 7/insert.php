@@ -6,7 +6,7 @@
     $star = $_POST["star"];
 
     //2. DB接続します
-    $pdo = new PDO('mysql:dbname=an;charset=utf8;host=localhost', 'root', 'root');
+$pdo = new PDO('mysql:dbname=an;charset=utf8;host=localhost', 'root', 'root');
 
     //３．データ登録SQL作成
     $stmt = $pdo->prepare("INSERT INTO an_table (id, name, age, blood, star, indate )VALUES(NULL, :name, :age, :blood, :star, sysdate())");

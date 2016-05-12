@@ -1,0 +1,20 @@
+body {
+    background-color: #eee;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+main {
+   padding: 32px;
+}
+
+#to_home {
+    overflow: auto;
+}
+
+#chartContainer_age {
+    overflow: auto;
+    width: 100%;
+    height: 256px;
+}

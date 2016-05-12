@@ -1,15 +1,4 @@
-var chart = new CanvasJS.Chart("chartContainer", {
-    data: [{
-
-        // グラフの種類を設定する
-        type: 'pie',
-
-        // グラフに描画するデータを設定する
-        dataPoints: dataPlot //ここにデータを渡す
-
-    }]
-});
-
+//チャート用データ
 var dataPlot = [
     {
         label: "リンゴ",
@@ -31,5 +20,14 @@ var dataPlot = [
         label: "グレープ",
         y: 28
     }
-          ];
+];
+//========================================
+
+//チャートの生成
+var chart = new CanvasJS.Chart("chartContainer_age", {
+    data: [{
+        type: 'column',
+        dataPoints: dataPlot
+    }]
+});
 chart.render();
