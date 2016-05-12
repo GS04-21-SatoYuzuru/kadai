@@ -3,18 +3,30 @@ body {
     width: 100%;
     margin: 0 auto;
     padding: 0 auto;
+    text-align: center;
+}
+
+header {
+    overflow: auto;
 }
 
 main {
-   padding: 32px;
+    overflow: auto;
+    padding: 64px;
+    height: 512px;
 }
 
 #to_home {
     overflow: auto;
+    margin-bottom: 32px;
 }
 
-#chartContainer_age {
+#chartContainer_blood {
     overflow: auto;
     width: 100%;
-    height: 256px;
+    height: 512px;
+}
+
+header {
+    overflow: auto;
 }
