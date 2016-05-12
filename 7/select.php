@@ -29,6 +29,7 @@
         </div>
 
         <div id="total_id"></div>
+        <div id="chartContainer_age"></div>
         <div id="chartContainer_blood"></div>
         <div id="chartContainer_star"></div>
 
@@ -39,7 +40,60 @@
                 /*===== トータル人数 =====*/
                 var count_total_id = 100;
                 $("#total_id").html("今までに " + count_total_id + " 人のアンケート回答がありました。");
+                /*=========================*/
 
+                /*===== 年齢層チャート =====*/
+                var count_age_secret = 3;
+                var count_age_20 = 8;
+                var count_age_30 = 23;
+                var count_age_40 = 15;
+                var count_age_50 = 4;
+                var count_age_60 = 3;
+
+
+                var chart_age = new CanvasJS.Chart("chartContainer_age", {
+                    title: {
+                        text: "年齢層"
+                    },
+                    legend: {
+                        maxWidth: 350,
+                        itemWidth: 120
+                    },
+                    data: [
+                        {
+                            type: "pie",
+                            showInLegend: true,
+                            legendText: "{indexLabel}",
+                            dataPoints: [
+                                {
+                                    y: count_age_20,
+                                    indexLabel: "20歳まで"
+                                },
+                                {
+                                    y: count_age_30,
+                                    indexLabel: "30代"
+                                },
+                                {
+                                    y: count_age_40,
+                                    indexLabel: "40代"
+                                },
+                                {
+                                    y: count_age_50,
+                                    indexLabel: "5O代"
+                                },
+                                {
+                                    y: count_age_60,
+                                    indexLabel: "60歳以上"
+                                },
+                                {
+                                    y: count_age_secret,
+                                    indexLabel: "秘密"
+                                }
+                            ]
+                        }
+                    ]
+                });
+                chart_age.render();
                 /*=========================*/
 
 
@@ -53,7 +107,7 @@
 
                 var chart_blood = new CanvasJS.Chart("chartContainer_blood", {
                     title: {
-                        text: "血液型チャート"
+                        text: "血液型の割合"
                     },
                     legend: {
                         maxWidth: 350,
@@ -111,7 +165,7 @@
 
                 var chart_star = new CanvasJS.Chart("chartContainer_star", {
                     title: {
-                        text: "星座チャート"
+                        text: "星座の割合"
                     },
                     data: [
                         {
