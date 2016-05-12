@@ -21,10 +21,24 @@ main {
     margin-bottom: 32px;
 }
 
-#chartContainer_blood {
+#total_id {
     overflow: auto;
     width: 100%;
-    height: 512px;
+    margin-bottom: 16px;
+}
+
+#chartContainer_blood {
+    overflow: auto;
+    margin-bottom: 16px;
+    width: 100%;
+    height: 300px;
+}
+
+#chartContainer_star {
+    overflow: auto;
+    margin-bottom: 16px;
+    width: 100%;
+    height: 300px;
 }
 
 header {

@@ -28,13 +28,20 @@
             <button><a href="index.html">ホームへ</a></button>
         </div>
 
+        <div id="total_id"></div>
         <div id="chartContainer_blood"></div>
+        <div id="chartContainer_star"></div>
 
         <!-- CanvasJS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
-        <!--<script src="./js/app.js"></script>-->
         <script>
             window.onload = function () {
+                /*===== トータル人数 =====*/
+                var count_total_id = 100;
+                $("#total_id").html("今までに " + count_total_id + " 人のアンケート回答がありました。");
+
+                /*=========================*/
+
 
                 /*===== 血液型チャート =====*/
                 var count_blood_a = 20;
@@ -87,6 +94,82 @@
                     ]
                 });
                 chart_blood.render();
+                /*=========================*/
+                /*===== 星座チャート =====*/
+                var count_star_yagi = 1;
+                var count_star_mizugame = 3;
+                var count_star_uo = 5;
+                var count_star_ohitsuji = 3;
+                var count_star_oushi = 7;
+                var count_star_futago = 5;
+                var count_star_kani = 8;
+                var count_star_shishi = 4;
+                var count_star_otome = 1;
+                var count_star_tenbin = 6;
+                var count_star_sasori = 3;
+                var count_star_ite = 1;
+
+                var chart_star = new CanvasJS.Chart("chartContainer_star", {
+                    title: {
+                        text: "星座チャート"
+                    },
+                    data: [
+                        {
+                            type: "doughnut",
+                            dataPoints: [
+                                {
+                                    y: count_star_yagi,
+                                    indexLabel: "やぎ座"
+                                },
+                                {
+                                    y: count_star_mizugame,
+                                    indexLabel: "みずがめ座"
+                                },
+                                {
+                                    y: count_star_uo,
+                                    indexLabel: "うお座"
+                                },
+                                {
+                                    y: count_star_ohitsuji,
+                                    indexLabel: "おひつじ座"
+                                },
+                                {
+                                    y: count_star_oushi,
+                                    indexLabel: "おうし座"
+                                },
+                                {
+                                    y: count_star_futago,
+                                    indexLabel: "ふたご座"
+                                },
+                                {
+                                    y: count_star_kani,
+                                    indexLabel: "かに座"
+                                },
+                                {
+                                    y: count_star_shishi,
+                                    indexLabel: "しし座"
+                                },
+                                {
+                                    y: count_star_otome,
+                                    indexLabel: "おとめ座"
+                                },
+                                {
+                                    y: count_star_tenbin,
+                                    indexLabel: "てんびん座"
+                                },
+                                {
+                                    y: count_star_sasori,
+                                    indexLabel: "さそり座"
+                                },
+                                {
+                                    y: count_star_ite,
+                                    indexLabel: "いて座"
+                                },
+                            ]
+                        }
+                    ]
+                });
+                chart_star.render();
                 /*=========================*/
             }
         </script>
