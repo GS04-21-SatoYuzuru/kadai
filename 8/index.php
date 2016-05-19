@@ -39,17 +39,21 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-12">
                         <label>名前：
                             <input type="text" name="name" placeholder="○○" required>
                         </label>
                     </div>
-                    <div class="col-sm-4">
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
                         <label>Email：
                             <input type="email" name="email" placeholder="aaa@gmail.com" required>
                         </label>
                     </div>
-                    <div class="col-sm-4">
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
                         <label>年齢：
                             <input type="text" name="age" placeholder="99" required>
                         </label>

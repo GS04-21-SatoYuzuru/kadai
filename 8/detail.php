@@ -58,37 +58,69 @@ $result = $stmt->fetch();
 
         <!-- Main[Start] -->
         <form method="post" action="update.php">
-            <div class="jumbotron">
+            <div class="container jumbotron">
                 <fieldset>
-                    <legend>フリーアンケート (修正)</legend>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <legend>フリーアンケート (修正)</legend>
+                        </div>
+                    </div>
 
                     <input type="hidden" name="id" value="<?=$result["id"]?>">
 
-                    <label>名前：
-                        <input type="text" name="name" value="<?=$result["name"]?>">
-                    </label>
-                    <br>
-                    <label>Email：
-                        <input type="email" name="email" value="<?=$result["email"]?>">
-                    </label>
-                    <br>
-                    <label>
-                    <label>年齢：
-                        <input type="text" name="age" value="<?=$result["age"]?>">
-                    </label>
-                    <br>
-                    <label>
-                        <textArea name="naiyou" rows="4" cols="40">
-                            <?=$result["naiyou"]?>
-                        </textArea>
-                    </label>
-                    <br>
-                    <input type="submit" value="送信">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <label>名前：
+                                <input type="text" name="name" value="<?=$result["name"]?>">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <label>Email：
+                                <input type="email" name="email" value="<?=$result["email"]?>">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <label>年齢：
+                                <input type="text" name="age" value="<?=$result["age"]?>">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <label>
+                                <textArea name="naiyou" rows="4" cols="40">
+                                    <?=$result["naiyou"]?>
+                                </textArea>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <input type="submit" value="更新">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </form>
+
+        <!-- 削除ボタン-->
+        <form method="post" action="delete.php">
+            <div class="container jumbotron">
+                <fieldset>
+                    <input type="hidden" name="id" value="<?=$result["id"]?>">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <input type="submit" value="このユーザー情報を削除">
+                        </div>
+                    </div>
                 </fieldset>
             </div>
         </form>
         <!-- Main[End] -->
-
 
     </body>
 
