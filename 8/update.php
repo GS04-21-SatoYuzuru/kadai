@@ -30,7 +30,7 @@ if($status==false){
     $error = $stmt->errorInfo();
     exit("QueryError:".$error[2]);
 }else{
-    //５．index.phpへリダイレクト
+    //５．select.phpへリダイレクト
     header("Location: select.php");
     exit;
 }
