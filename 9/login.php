@@ -15,6 +15,9 @@ PW:<input type="password" name="lpw" />
 <input type="submit" value="LOGIN" />
 </form>
 
+<div>
+    <button><a href="registration.php">新規登録</a></button>
+</div>
 
 <?php
 //2. HTML_ENDをインクルード
