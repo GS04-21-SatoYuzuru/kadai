@@ -16,7 +16,7 @@ $admin = loginRollSet();//func.php
 $pdo = db();//func.php
 
 //２．データ登録SQL作成
-$stmt = $pdo->prepare("SELECT * FROM gs_an_table");
+$stmt = $pdo->prepare("SELECT * FROM gs_an_table ORDER BY indate DESC LIMIT 5");
 $status = $stmt->execute();
 
 //３データ表示
@@ -27,11 +27,21 @@ if($status==false){
   $error = $stmt->errorInfo();
   exit("ErrorQuery:".$error[2]);
 }else{
-  //Selectデータの数だけ自動でループしてくれる
-  while( $result = $stmt->fetch(PDO::FETCH_ASSOC) ){
-    //管理FLGで表示を切り分けたりしてみましょう！！！（追加してください！）
-    $view .= '<p><a href="detail.php?id='.$result["id"].'">'.$result["name"]." : ".$result["email"].'</a></p>';
-  }
+    //管理FLGで表示を切り分け
+    if( $_SESSION["kanri_flg"]==1 ) {
+        //Selectデータの数だけ自動でループしてくれる
+        while( $result = $stmt->fetch(PDO::FETCH_ASSOC) ){
+        $view .= '<p><a href="detail.php?id='.$result["id"].'">'.$result["name"]." : ".$result["email"].'</a></p>';
+        }
+    } else if( $_SESSION["kanri_flg"]==0 ){
+        $view .= '';
+    }
+
+    if( $_SESSION["kanri_flg"]==1 ) {
+        $link_an  =  "";
+    }else if( $_SESSION["kanri_flg"]==0 ){
+        $link_an = '<a class="navbar-brand" href="an.php">アンケート登録</a>';
+    }
 }
 ?>
 
@@ -54,14 +64,13 @@ if($status==false){
   <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-        <a class="navbar-brand" href="index.php">データ登録</a>
-        <a class="navbar-brand" href="logout.php">ログアウト</a>
-        <p>
-            <?=$name?>
-        </p>
-        <p>
-            <?=$admin?>
-        </p>
+            <a class="navbar-brand" href="logout.php">ログアウト</a>
+            <p>
+                <?=$name?>
+            </p>
+            <p>
+                <?=$admin?>
+            </p>
       </div>
     </div>
   </nav>
@@ -70,6 +79,7 @@ if($status==false){
 
 <!-- Main[Start] -->
 <div>
+    <div class="container jumbotron"><?=$link_an?></div>
     <div class="container jumbotron"><?=$view?></div>
   </div>
 </div>
